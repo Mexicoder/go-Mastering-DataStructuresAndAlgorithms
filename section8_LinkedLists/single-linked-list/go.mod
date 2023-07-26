@@ -1,3 +1,3 @@
-module single_linked_list
+module single-linked-list
 
 go 1.20
