@@ -1,4 +1,3 @@
-// package first_linked_list single_linked_list
 package single_linked_list
 
 import (
