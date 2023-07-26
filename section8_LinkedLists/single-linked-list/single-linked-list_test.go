@@ -1,4 +1,4 @@
-package main
+package single_linked_list
 
 import (
 	"testing"
