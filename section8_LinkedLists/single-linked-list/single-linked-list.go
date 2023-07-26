@@ -3,7 +3,6 @@ package single_linked_list
 
 import (
 	"errors"
-	"fmt"
 )
 
 type Node struct {
@@ -262,28 +261,28 @@ func (l *SingleLinkedList) Reverse2() *SingleLinkedList {
 	return l
 }
 
-func main() {
-	list := NewSingleLinkedList()
-
-	list.Append("hi")
-	list.Append("there")
-	list.Append("!!!")
-
-	fmt.Println(list.PrintList())
-	fmt.Println("length: ", list.Length())
-
-	fmt.Println(list.Search("there"))
-
-	list.Delete(1)
-
-	fmt.Println(list.PrintList())
-	fmt.Println("length: ", list.Length())
-
-	list.Insert("world", 1)
-
-	fmt.Println(list.PrintList())
-	fmt.Println("length: ", list.Length())
-
-	fmt.Println(list.Reverse().PrintList())
-	fmt.Println(list.Reverse2().PrintList())
-}
+//func main() {
+//	list := NewSingleLinkedList()
+//
+//	list.Append("hi")
+//	list.Append("there")
+//	list.Append("!!!")
+//
+//	fmt.Println(list.PrintList())
+//	fmt.Println("length: ", list.Length())
+//
+//	fmt.Println(list.Search("there"))
+//
+//	list.Delete(1)
+//
+//	fmt.Println(list.PrintList())
+//	fmt.Println("length: ", list.Length())
+//
+//	list.Insert("world", 1)
+//
+//	fmt.Println(list.PrintList())
+//	fmt.Println("length: ", list.Length())
+//
+//	fmt.Println(list.Reverse().PrintList())
+//	fmt.Println(list.Reverse2().PrintList())
+//}
