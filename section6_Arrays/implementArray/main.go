@@ -43,7 +43,22 @@ func (a *MyArray) Pop() interface{} {
 }
 
 func (a *MyArray) Delete(index int) {
-
+	for i := 0; i < len(a.data); i++ {
+		if i == index {
+			val := a.data[i]
+			if i == len(a.data)-1 { // is last element
+				a.data = a.data[:i]
+				a.length -= 1
+			} else if i == 0 { // is first element
+				a.data = a.data[i+1:]
+				a.length -= 1
+			} else {
+				a.data = append(a.data[:i], a.data[i+1:]...)
+				a.length -= 1
+			}
+			fmt.Println("Deleted: ", val)
+		}
+	}
 }
 
 // -----------------------------------
@@ -67,4 +82,23 @@ func main() {
 
 	fmt.Println(newArray)
 
+	newArray.Push("!")
+
+	fmt.Println(newArray)
+
+	newArray.Delete(1)
+
+	fmt.Println(newArray)
+	newArray.Delete(1)
+
+	fmt.Println(newArray)
+
+	newArray.Push("you")
+
+	newArray.Push("!")
+
+	fmt.Println(newArray)
+	newArray.Delete(2)
+
+	fmt.Println(newArray)
 }
